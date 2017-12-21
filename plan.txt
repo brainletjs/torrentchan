@@ -1,0 +1,50 @@
+1. user hits server with request
+2. chan server replies with client.html
+3. client.html asks server for contents.json (need to come up with a cooler name)
+4. client.html downloads threads and their 5 most recent posts as post.torrent(s)
+5. if user is on thread page then poll server for updates every 30 secs?
+
+server has no database, 
+
+images and files arent saved onto the server at any point, even for seeding, users just seed them to eachother, just one big json file in memory (cause thats fast nigga)
+
+moderation is done by the users and threads under a certain reputation are automatically hidden and not downloaded 
+
+TODO:
+	done:
+	-make flask pump out a json file with posts and threads
+	-create models for threads to posts (one thread to many posts)
+	-make flask output contents.json
+	-write very simple frontend code that requests contents.json from flask and displays contents
+	-integrate webtorrent to make images and posts work
+	-make client hit api and show catalog
+	-make frontend turn new posts into magnet links
+	-make client able to post and start new threads
+	-be able to go back to starting a thread after you reply to a thread
+    -multiple boards
+    -admin panel (remove posters from allowed posters and delete threads)
+
+	need to be done:
+	-need to deauthenitcate posters every 24 hours
+	-tell posters when they are not authenicated
+	-make client show reply view for thread
+
+	
+	-some way to refresh page without losing all the torrents
+
+
+
+	
+
+	-detect large files client side and be able to click to download(UNFINISHED AND IMPORTANT)
+	-rating system and autohide threads under a certain threshold
+
+
+BEFORE RELEASE:
+*clean strings
+*remove all testing server shit
+* tell people when they can't post cause they havent filled captcha
+* some way to save the database
+
+BUGS!!!------------------
+- fontend shows replies to a thread in the lowest thread on a page if updating one by one (replies not in correct thread)

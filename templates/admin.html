@@ -1,0 +1,46 @@
+<!doctype html>
+<head>
+   
+</head>
+<title>Admin</title>
+
+{% if boardData %}
+  <h1>Torrentchan Admin panel</h1>
+
+<center><h3>thread list with posts</h3></center>
+<hr>
+ <form method="post">
+ 	<ol>
+ 	{%for thread in boardData %}
+ 	<li>
+     <details>
+         <summary>Thread ID#{{ thread.post_id }} posted at {{ thread.post_time }} by {{ thread.poster}} Title:{{ thread.title }} 
+           (ban poster) <input type="checkbox" name="banPoster" value="{{ thread.poster}}">|
+           (delete thread/post)<input type="checkbox" name="deletePost" value="{{ thread.post_id }}">| 
+         </summary>
+         <!-- thread posts go here -->
+         <ol>
+         {%for post in thread.posts %}
+         	 	<li>
+
+			         <p>Post ID#{{ post.post_id }} posted at {{ post.post_time }} by {{ post.poster}} 
+			           (ban poster) <input type="checkbox" name="banPoster" value="{{ post.poster}}">|
+			           (delete thread/post)<input type="checkbox" name="deletePost" value="{{ post.post_id }}">| 
+               </p>
+			     </li>
+         {%endfor%}
+     	 </ol>
+     </details>
+     </li>
+     <br>
+    {% endfor %}
+    </ol>
+ 	<!--<input type="hidden" name="captchanum" value="{{ name }}">-->
+     <hr>
+ 	<input type="submit" value="Submit">
+ </form>
+
+{% else %}
+  <h1>Something went wrong with the boardData! you may have entered an invalid board code</h1>
+{% endif %}
+

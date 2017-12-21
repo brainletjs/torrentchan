@@ -1,0 +1,73 @@
+body{
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    font-family: monospace;
+}
+
+.post{
+    /*outline: 2px solid #7f8c8d; */
+    padding: 5px;
+    background-color: #ecf0f1;
+    display:inline-block;
+    margin: 5px;
+    float:left;
+    clear:both;
+    margin-left: 3em;
+}
+
+.thread{
+    padding: 5px;
+    background-color: #ecf0f1;
+    display:inline-block;
+    margin: 5px;
+    float:left;
+    clear:left;
+}
+
+.reply{
+    padding: 5px;
+    background-color: #ecf0f1;
+    display:inline-block;
+    margin: 5px;
+    float:right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
+
+#replyintro{
+    padding: 3px;
+    margin: 3px;
+    background-color: skyblue;
+}
+
+
+#comment{
+    width:95%;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    word-spacing: normal;
+    font-size: inherit;
+    font-family: sans-serif;
+}
+
+#diebutton {
+	display: none;
+}
+
+a{
+    color:#3498db;
+}
+
+/* this is for the body of the post not the body html */
+.body{
+    display: inline;
+}
+
+
+.files{
+    display: inline;
+
+}

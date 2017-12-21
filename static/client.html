@@ -1,0 +1,38 @@
+<!--  <!doctype html> -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TorrentChan</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="../static/main.css">
+    </head>
+    
+    
+    
+    <body>
+        
+        
+        <div class="reply">
+            <div id="replyintro"><b>New Thread:</b></div>
+            <form>
+                <p><input type="text" id="titleentry" placeholder="title"></input></p>
+            <div class="textinput">
+                <textarea placeholder="Enter your comment here" name="comment" id="comment" rows="5" cols="35"></textarea>
+                </div>
+                <input id="fileupload" type="file"></input>
+            <input type="button" id="diebutton" onClick="noreply()" value="Back"></input>
+            <input type="button" id="submitbutton" onClick="sendThread()" value="Submit"></input>
+            
+            </form>
+        </div>
+        
+        <!-- jquery would go here -->
+        <script src="../static/webtorrent.min.js"></script>
+        <script src="../static/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Captcha</title>
+{% if name %}
+  <h1>Type the captcha below</h1>
+  <img src="../static/{{ name }}.png">
+
+ <form method="post">
+ 	<input type="text" name="answer">
+ 	<input type="hidden" name="captchanum" value="{{ name }}">
+ 	<input type="submit" value="Submit">
+ </form>
+
+{% else %}
+  <h1>Something went wrong!</h1>
+{% endif %}
